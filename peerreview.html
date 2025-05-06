@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Peer Review</title>
+    <link rel="stylesheet" href="peerreview.css">
+</head>
+<body>
+    <button onclick="goToDashboard()">Back to Dashboard</button>
+<button onclick="viewAllReviews()">View Submitted Reviews</button>
+
+<!-- New section to show all reviews -->
+<div id="allReviews" style="margin-top: 20px;"></div>
+
+
+    <div class="container">
+        <h2>Peer Review Evaluation</h2>
+        <label for="studentName">Enter Student Name:</label>
+        <input type="text" id="studentName" placeholder="Student Name">
+
+        <h3>Rate the student (1-5)</h3>
+        <label>Task Contribution:</label>
+        <input type="number" id="tc" min="1" max="5">
+
+        <label>Collaboration & Communication:</label>
+        <input type="number" id="cc" min="1" max="5">
+
+        <label>Timeliness:</label>
+        <input type="number" id="t" min="1" max="5">
+
+        <label>Problem-Solving:</label>
+        <input type="number" id="ps" min="1" max="5">
+
+        <button onclick="addReview()">Add Review</button>
+        <button onclick="calculateScores()">Compute Scores</button>
+        <h3>Final Scores</h3>
+        <div id="results"></div>
+        
+    </div>
+    
+    <script src="peerreview.js"></script>
+</body>
+</html>
