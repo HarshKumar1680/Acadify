@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming 2A | Acadify</title>
+    <link rel="stylesheet" href="dbms.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (same as other pages) -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="Acadify Logo" class="logo">
+                <h1 class="logo-text">Acadify</h1>
+            </div>
+            
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">ACADEMIC</p>
+                <nav class="sidebar-nav">
+                    <a href="index.html" class="nav-item">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="timetable.html" class="nav-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Timetable</span>
+                    </a>
+                    
+                    <a href="peerreview.html" class="nav-item">
+                        <i class="fas fa-users"></i>
+                        <span>Peer Review</span>
+                    </a>
+                    <a href="c.html" class="nav-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Calendar</span>
+                    </a>
+                    <a href="assignmentracker.html" class="nav-item">
+                        <i class="fas fa-tasks"></i>
+                        <span>Assignment Tracker</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header (same as other pages) -->
+            <header class="header">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for a course...">
+                        <button class="search-btn">Search</button>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">2</span>
+                    </div>
+                    <div class="user-profile">
+                        <span>John Doe</span>
+                        <a href="#" class="logout-btn">Logout</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="dashboard.html">Courses</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Programming 2A</span>
+            </div>
+
+            <!-- Course Header -->
+            <div class="course-header">
+                <div class="course-info">
+                    <h1>Programming 2A</h1>
+                    <div class="instructor">
+                        <i class="fas fa-user"></i>
+                        <span>Prof. Davis</span>
+                    </div>
+                    <div class="schedule">
+                        <i class="fas fa-calendar"></i>
+                        <span>Monday & Saturday</span>
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Computer Lab 3</span>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Instructor</span>
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-star"></i>
+                        <span>Add to Favorites</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Course Navigation -->
+            <div class="course-nav">
+                <button class="nav-tab active" data-tab="overview">Overview</button>
+                <button class="nav-tab" data-tab="modules">Modules</button>
+                <button class="nav-tab" data-tab="assignments">Assignments</button>
+                <button class="nav-tab" data-tab="discussions">Discussions</button>
+                <button class="nav-tab" data-tab="resources">Resources</button>
+                <button class="nav-tab" data-tab="grades">Grades</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Overview Tab -->
+                <div class="tab-pane active" id="overview">
+                    <div class="overview-grid">
+                        <!-- Course Description -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Course Description</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Advanced programming concepts including object-oriented programming, data structures, algorithms, and software design patterns. Students will develop complex applications using modern programming languages.</p>
+                                <div class="course-meta">
+                                    <div class="meta-item">
+                                        <span class="meta-label">Credits:</span>
+                                        <span class="meta-value">3</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">Duration:</span>
+                                        <span class="meta-value">12 weeks</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">Level:</span>
+                                        <span class="meta-value">Undergraduate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Announcements -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Announcements</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="announcement">
+                                    <div class="announcement-header">
+                                        <h3>Code Review Session</h3>
+                                        <span class="date">Posted on Mar 15, 2025</span>
+                                    </div>
+                                    <p>Peer code review session scheduled for next week. Bring your project code for review.</p>
+                                </div>
+                                <div class="announcement">
+                                    <div class="announcement-header">
+                                        <h3>IDE Setup Guide</h3>
+                                        <span class="date">Posted on Mar 12, 2025</span>
+                                    </div>
+                                    <p>Updated IDE setup guide available in the resources section.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Upcoming Deadlines -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Upcoming Deadlines</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="deadline-list">
+                                    <div class="deadline">
+                                        <div class="deadline-info">
+                                            <h3>Data Structures Implementation</h3>
+                                            <p>Due Feb 26, 2025 - 11:59 PM</p>
+                                        </div>
+                                        <a href="#" class="btn btn-sm">View</a>
+                                    </div>
+                                    <div class="deadline">
+                                        <div class="deadline-info">
+                                            <h3>Design Patterns Project</h3>
+                                            <p>Due Mar 5, 2025 - 11:59 PM</p>
+                                        </div>
+                                        <a href="#" class="btn btn-sm">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modules Tab -->
+<div class="tab-pane" id="modules">
+    <div class="modules-container">
+      <div class="module">
+        <div class="module-header">
+          <h2>Module 1: Advanced Programming Concepts</h2>
+          <button class="module-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="module-content">
+          <div class="module-topics">
+            <div class="topic completed">
+              <div class="topic-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>1.1 Object-Oriented Programming (OOP) Review</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-file-pdf"></i>
+                  <span>Lecture Slides</span>
+                </a>
+                <a href="#" class="resource">
+                  <i class="fas fa-video"></i>
+                  <span>Lecture Recording</span>
+                </a>
+              </div>
+            </div>
+            <div class="topic completed">
+              <div class="topic-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>1.2 Exception Handling and Assertions</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-file-pdf"></i>
+                  <span>Lecture Slides</span>
+                </a>
+                <a href="#" class="resource">
+                  <i class="fas fa-video"></i>
+                  <span>Lecture Recording</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="module">
+        <div class="module-header">
+          <h2>Module 2: Data Structures and Algorithms</h2>
+          <button class="module-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="module-content">
+          <div class="module-topics">
+            <div class="topic active">
+              <div class="topic-header">
+                <i class="fas fa-play-circle"></i>
+                <h3>2.1 Linked Lists and Trees</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-file-pdf"></i>
+                  <span>Lecture Slides</span>
+                </a>
+                <a href="#" class="resource">
+                  <i class="fas fa-video"></i>
+                  <span>Lecture Recording</span>
+                </a>
+              </div>
+            </div>
+            <div class="topic">
+              <div class="topic-header">
+                <i class="fas fa-circle"></i>
+                <h3>2.2 Sorting and Searching Algorithms</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-lock"></i>
+                  <span>Available on May 6, 2025</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="module">
+        <div class="module-header">
+          <h2>Module 3: Advanced Topics</h2>
+          <button class="module-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="module-content">
+          <div class="module-topics">
+            <div class="topic">
+              <div class="topic-header">
+                <i class="fas fa-circle"></i>
+                <h3>3.1 Multithreading and Concurrency</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-lock"></i>
+                  <span>Available on May 13, 2025</span>
+                </a>
+              </div>
+            </div>
+            <div class="topic">
+              <div class="topic-header">
+                <i class="fas fa-circle"></i>
+                <h3>3.2 Introduction to Web Development</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-lock"></i>
+                  <span>Available on May 20, 2025</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Assignments Tab -->
+<div class="tab-pane" id="assignments">
+    <div class="assignments-container">
+      <div class="assignments-filters">
+        <div class="filter-group">
+          <label>Status:</label>
+          <select id="status-filter">
+            <option value="all">All</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="submitted">Submitted</option>
+            <option value="graded">Graded</option>
+            <option value="missed">Missed</option>
+          </select>
+        </div>
+        <div class="search-assignments">
+          <input type="text" placeholder="Search assignments...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+  
+      <div class="assignments-list">
+        
+  <!-- Programming 2A Assignments -->
+  <div class="assignment-item completed">
+    <div class="assignment-info">
+      <h3>Assignment 2: Object-Oriented Programming (OOP)</h3>
+      <div class="assignment-meta">
+        <span class="due-date">Due: Apr 20, 2025, 11:59 PM</span>
+        <span class="points">Points: 25</span>
+        <span class="status graded">Graded: 23/25</span>
+      </div>
+      <p>Create a class hierarchy for a library management system using OOP concepts in Java.</p>
+    </div>
+    <div class="assignment-actions">
+      <a href="#" class="btn btn-outline">View Feedback</a>
+    </div>
+  </div>
+
+  <div class="assignment-item completed">
+    <div class="assignment-info">
+      <h3>Assignment 1: Introduction to Java Programming</h3>
+      <div class="assignment-meta">
+        <span class="due-date">Due: Apr 10, 2025, 11:59 PM</span>
+        <span class="points">Points: 15</span>
+        <span class="status graded">Graded: 15/15</span>
+      </div>
+      <p>Write Java programs to demonstrate basic syntax, control structures, and methods.</p>
+    </div>
+    <div class="assignment-actions">
+      <a href="#" class="btn btn-outline">View Feedback</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- Discussions Tab -->
+<div class="tab-pane" id="discussions">
+    <div class="discussions-container">
+      <div class="discussions-header">
+        <h2>Course Discussions</h2>
+        <button class="btn btn-primary">New Discussion</button>
+      </div>
+
+      <div class="discussion-boards">
+        <div class="discussion-board">
+          <div class="board-header">
+            <h3>General Discussion</h3>
+            <span class="post-count">16 posts</span>
+          </div>
+          <div class="discussion-list">
+            <div class="discussion-item">
+              <div class="discussion-info">
+                <h4>Question about Transaction Isolation Levels</h4>
+                <div class="discussion-meta">
+                  <span class="author">John Doe</span>
+                  <span class="date">Mar 15, 2025</span>
+                  <span class="replies">5 replies</span>
+                </div>
+                <p>I'm struggling to understand the difference between Read Committed and Repeatable Read isolation levels...</p>
+              </div>
+              <div class="discussion-status">
+                <span class="status unread">New Replies</span>
+              </div>
+            </div>
+            <div class="discussion-item">
+              <div class="discussion-info">
+                <h4>ER Diagram Tool Recommendations</h4>
+                <div class="discussion-meta">
+                  <span class="author">Maria Chen</span>
+                  <span class="date">Mar 10, 2025</span>
+                  <span class="replies">8 replies</span>
+                </div>
+                <p>Does anyone have recommendations for good tools to create ER diagrams for Assignment 2?</p>
+              </div>
+              <div class="discussion-status">
+                <span class="status read">Read</span>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="view-all">View all discussions</a>
+        </div>
+
+        <div class="discussion-board">
+          <div class="board-header">
+            <h3>Assignment Help</h3>
+            <span class="post-count">24 posts</span>
+          </div>
+          <div class="discussion-list">
+            <div class="discussion-item">
+              <div class="discussion-info">
+                <h4>Clarification on SQL Joins Assignment</h4>
+                <div class="discussion-meta">
+                  <span class="author">Alex Johnson</span>
+                  <span class="date">Mar 16, 2025</span>
+                  <span class="replies">3 replies</span>
+                </div>
+                <p>For question 4 in Assignment 3, are we supposed to use LEFT JOIN or INNER JOIN?</p>
+              </div>
+              <div class="discussion-status">
+                <span class="status instructor">Instructor Reply</span>
+              </div>
+            </div>
+            <div class="discussion-item">
+              <div class="discussion-info">
+                <h4>Error in MySQL Workbench</h4>
+                <div class="discussion-meta">
+                  <span class="author">Sophia Park</span>
+                  <span class="date">Mar 14, 2025</span>
+                  <span class="replies">7 replies</span>
+                </div>
+                <p>I'm getting an error when trying to execute the sample query from class. Can anyone help?</p>
+              </div>
+              <div class="discussion-status">
+                <span class="status read">Read</span>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="view-all">View all discussions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Programming 2A Grades Tab -->
+<div class="tab-pane" id="prog2a-grades">
+    <div class="grades-container">
+      <div class="grades-header">
+        <h2>Programming 2A Grades</h2>
+        <div class="grades-summary">
+          <div class="grade-stat">
+            <span class="stat-label">Current Grade</span>
+            <span class="stat-value">91.0%</span>
+          </div>
+          <div class="grade-stat">
+            <span class="stat-label">Letter Grade</span>
+            <span class="stat-value">A-</span>
+          </div>
+          <div class="grade-stat">
+            <span class="stat-label">Course Complete</span>
+            <span class="stat-value">50%</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="grade-chart">
+        <canvas id="prog2AGradeChart"></canvas>
+      </div>
+  
+      <div class="grades-breakdown">
+        <table class="grades-table">
+          <thead>
+            <tr>
+              <th>Assignment</th>
+              <th>Due Date</th>
+              <th>Points</th>
+              <th>Grade</th>
+              <th>Feedback</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Assignment 1: Object-Oriented Programming</td>
+              <td>Feb 15, 2025</td>
+              <td>10</td>
+              <td class="grade-good">10/10 (100%)</td>
+              <td><a href="#" class="btn btn-sm">View</a></td>
+            </tr>
+            <tr>
+              <td>Quiz 1: Data Structures</td>
+              <td>Mar 2, 2025</td>
+              <td>15</td>
+              <td class="grade-good">14/15 (93%)</td>
+              <td><a href="#" class="btn btn-sm">View</a></td>
+            </tr>
+            <tr>
+              <td>Assignment 2: Algorithms</td>
+              <td>Mar 10, 2025</td>
+              <td>20</td>
+              <td class="grade-good">18/20 (90%)</td>
+              <td><a href="#" class="btn btn-sm">View</a></td>
+            </tr>
+            <tr>
+              <td>Assignment 3: Multithreading</td>
+              <td>Mar 22, 2025</td>
+              <td>15</td>
+              <td class="grade-pending">Not Submitted</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Lab Exercise: Sorting Algorithms</td>
+              <td>Mar 25, 2025</td>
+              <td>10</td>
+              <td class="grade-pending">Not Submitted</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Final Exam</td>
+              <td>Apr 10, 2025</td>
+              <td>100</td>
+              <td class="grade-pending">Upcoming</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+        
+  
+            </div>
+        </main>
+    </div>
+    <script src="dbms.js"></script>
+</body>
+</html>

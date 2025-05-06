@@ -1,0 +1,275 @@
+:root {
+    --primary-color: #1a237e;
+    --sidebar-width: 250px;
+    --header-height: 60px;
+    --card-bg: #f5f7fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: white;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.logo {
+    padding: 20px 0;
+    color: var(--primary-color);
+}
+
+.nav-section {
+    margin-bottom: 30px;
+}
+
+.nav-section h3 {
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0 10px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.sidebar a.active {
+    background-color: #e3f2fd;
+    color: var(--primary-color);
+}
+
+.sidebar a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.search-bar i {
+    color: #666;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.header-icons i {
+    font-size: 20px;
+    margin-left: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Timetable Styles */
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.timetable-container {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.timetable-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-save {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.timetable-grid {
+    display: grid;
+    grid-template-columns: 120px repeat(4, 1fr);
+    gap: 1px;
+    background-color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.time-header {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.day-cell {
+    background: #f5f5f5;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.class-cell {
+    background: white;
+    padding: 10px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.location {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* Calendar and Reminders Styles */
+.calendar-reminders {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mini-calendar {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.btn-edit {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-grid div {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.calendar-grid .today {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+}
+
+.reminders {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.reminders h3 {
+    margin-bottom: 15px;
+}
+
+.reminders ul {
+    list-style: none;
+}
+
+.reminders li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.reminders .date {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.reminders .reminder-text {
+    font-size: 14px;
+}
+
+.view-more {
+    display: flex;
+    align-items: center;
+    color: #2196f3;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.view-more i {
+    margin-left: 5px;
+}
