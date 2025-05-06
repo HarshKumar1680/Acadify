@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Feedback - Acadify</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f9f8;
+      display: flex;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #fff;
+      border-right: 1px solid #ccc;
+      padding: 20px;
+      height: 100vh;
+    }
+    .sidebar h2 {
+      color: #2b3674;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+    .sidebar ul li {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #f2f6ff;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .sidebar ul li:hover {
+      background-color: #dce7ff;
+    }
+    .main {
+      flex: 1;
+      padding: 30px;
+    }
+    .main h1 {
+      color: #2b3674;
+    }
+    .feedback-form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+    .feedback-form select,
+    .feedback-form textarea,
+    .feedback-form button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .stars {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    .stars input {
+      display: none;
+    }
+    .stars label {
+      font-size: 24px;
+      color: lightgray;
+      cursor: pointer;
+    }
+    .stars input:checked ~ label,
+    .stars label:hover,
+    .stars label:hover ~ label {
+      color: gold;
+    }
+    .feedback-list {
+      max-width: 600px;
+    }
+    .feedback-item {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .feedback-item h3 {
+      margin: 0;
+      color: #2b3674;
+    }
+    .feedback-item p {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Acadify</h2>
+    <ul>
+      <li>Dashboard</li>
+      <li>Timetable</li>
+      <li>Peer Review</li>
+      <li>Calendar</li>
+      <li>Assignment Tracker</li>
+      <li style="background-color:#2b3674; color:#fff;">Feedback</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h1>Teacher Feedback</h1>
+    <div class="feedback-form">
+      <h2>Submit Feedback</h2>
+      <label for="teacher">Select Teacher</label>
+      <select id="teacher">
+        <option value="">-- Choose a Teacher --</option>
+        <option value="Dr. Nishtha Phutela">Dr. Nishtha Phutela</option>
+        <option value="Prof. Anantha Rao">Prof. Anantha Rao</option>
+        <option value="Gautam Sir">Gautam Sir</option>
+      </select>
+
+      <label>Rating</label>
+      <div class="stars">
+        <input type="radio" name="star" id="star5" value="5"><label for="star5">&#9733;</label>
+        <input type="radio" name="star" id="star4" value="4"><label for="star4">&#9733;</label>
+        <input type="radio" name="star" id="star3" value="3"><label for="star3">&#9733;</label>
+        <input type="radio" name="star" id="star2" value="2"><label for="star2">&#9733;</label>
+        <input type="radio" name="star" id="star1" value="1"><label for="star1">&#9733;</label>
+      </div>
+
+      <textarea id="feedback" rows="4" placeholder="Write your feedback..."></textarea>
+      <button id="submitBtn">Submit</button>
+    </div>
+
+    <div class="feedback-list" id="feedbackList">
+      <h2>Submitted Feedback</h2>
+    </div>
+  </div>
+
+  <script>
+    window.onload = function() {
+      loadFeedback();
+    };
+
+    document.getElementById("submitBtn").addEventListener("click", submitFeedback);
+
+    function submitFeedback() {
+      const teacher = document.getElementById("teacher").value;
+      const feedback = document.getElementById("feedback").value;
+      const rating = document.querySelector('input[name="star"]:checked');
+
+      if (!teacher || !feedback || !rating) {
+        alert("Please fill all fields including rating.");
+        return;
+      }
+
+      const existingFeedback = JSON.parse(localStorage.getItem('feedback')) || [];
+      const newFeedback = {
+        teacher: teacher,
+        rating: rating.value,
+        feedback: feedback
+      };
+
+      existingFeedback.push(newFeedback);
+      localStorage.setItem('feedback', JSON.stringify(existingFeedback));
+
+      document.getElementById("teacher").value = "";
+      document.getElementById("feedback").value = "";
+      document.querySelectorAll('input[name="star"]').forEach(r => r.checked = false);
+
+      loadFeedback();
+    }
+
+    function loadFeedback() {
+      const feedbackList = document.getElementById("feedbackList");
+      feedbackList.innerHTML = '';
+      const storedFeedback = JSON.parse(localStorage.getItem('feedback')) || [];
+
+      storedFeedback.forEach(feedback => {
+        const item = document.createElement("div");
+        item.className = "feedback-item";
+
+        const heading = document.createElement("h3");
+        heading.textContent = `${feedback.teacher} - ${'★'.repeat(feedback.rating)}${'☆'.repeat(5 - feedback.rating)}`;
+
+        const para = document.createElement("p");
+        para.textContent = feedback.feedback;
+
+        item.appendChild(heading);
+        item.appendChild(para);
+        feedbackList.appendChild(item);
+      });
+    }
+  </script>
+</body>
+</html>
