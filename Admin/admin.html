@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acadify Admin Panel</title>
+  <link rel="stylesheet" href="admin.css"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <h2>
+        <img src="logo.jpeg" alt="Acadify Logo">
+        Acadify
+      </h2>
+      <a href="#" onclick="showAdminPanel()"><i class="fas fa-user-cog"></i> Admin Panel</a>
+      <a href="#"><i class="fas fa-bullhorn"></i> Announcements</a>
+      <a href="#"><i class="fas fa-cog"></i> Settings</a>
+      <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <div id="adminWelcome">
+        <h2>Welcome to the Acadify Admin Dashboard ✨</h2>
+        <p>
+          Use the sidebar to manage students, teachers, and courses. Click on the "Admin Panel" to start adding or editing records.
+          You can also make announcements, change settings, or log out using the options on the left.
+        </p>
+        <ul>
+          <li>📚 Manage academic data efficiently</li>
+          <li>🔍 Search and filter entries</li>
+          <li>📤 Export data to Excel</li>
+          <li>⚙️ Customize settings as needed</li>
+        </ul>
+      </div>
+
+      <div id="adminPanelContent" style="display: none;">
+        <section id="admin-panel">
+          <h2>Admin Panel</h2>
+          <div class="tabs">
+            <button onclick="showTab('students')">Students</button>
+            <button onclick="showTab('teachers')">Teachers</button>
+            <button onclick="showTab('courses')">Courses</button>
+          </div>
+
+          <!-- Students Tab -->
+          <div id="students" class="tab-content" style="display: none;">
+            <h3>Manage Students</h3>
+            <input type="text" id="studentName" placeholder="Name"/>
+            <input type="text" id="studentId" placeholder="ID"/>
+            <button onclick="addEntry('students')">Add Student</button>
+            <div>
+              <input type="text" id="studentSearch" placeholder="Search Students" oninput="search('students')"/>
+              <button onclick="exportToExcel('students')">Export to Excel</button>
+            </div>
+            <ul id="studentList"></ul>
+          </div>
+
+          <!-- Teachers Tab -->
+          <div id="teachers" class="tab-content" style="display: none;">
+            <h3>Manage Teachers</h3>
+            <input type="text" id="teacherName" placeholder="Name"/>
+            <input type="text" id="teacherId" placeholder="ID"/>
+            <button onclick="addEntry('teachers')">Add Teacher</button>
+            <div>
+              <input type="text" id="teacherSearch" placeholder="Search Teachers" oninput="search('teachers')"/>
+              <button onclick="exportToExcel('teachers')">Export to Excel</button>
+            </div>
+            <ul id="teacherList"></ul>
+          </div>
+
+          <!-- Courses Tab -->
+          <div id="courses" class="tab-content" style="display: none;">
+            <h3>Manage Courses</h3>
+            <input type="text" id="courseName" placeholder="Course Name"/>
+            <input type="text" id="courseCode" placeholder="Course Code"/>
+            <button onclick="addEntry('courses')">Add Course</button>
+            <div>
+              <input type="text" id="courseSearch" placeholder="Search Courses" oninput="search('courses')"/>
+              <button onclick="exportToExcel('courses')">Export to Excel</button>
+            </div>
+            <ul id="courseList"></ul>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+  <script src="test-cases.js"></script>
+
+</body>
+</html>
