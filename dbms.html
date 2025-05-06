@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database Management System - DATA6221 | Acadify</title>
+  <link rel="stylesheet" href="dbms.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-container">
+        <img src="logo.jpeg" alt="Acadify Logo" class="logo">
+        <h1 class="logo-text">Acadify</h1>
+      </div>
+      
+      <div class="sidebar-section">
+        <p class="sidebar-section-title">ACADEMIC</p>
+        <nav class="sidebar-nav">
+          <a href="index.html" class="nav-item">
+            <i class="fas fa-th-large"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="timetable.html" class="nav-item">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Timetable</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fas fa-clipboard-check"></i>
+            <span>Attendance</span>
+          </a>
+          <a href="peerreview.html" class="nav-item">
+            <i class="fas fa-users"></i>
+            <span>Peer Review</span>
+          </a>
+          <a href="c.html" class="nav-item">
+            <i class="fas fa-calendar"></i>
+            <span>Calendar</span>
+          </a>
+          <a href="assignmenttracker.html" class="nav-item">
+            <i class="fas fa-tasks"></i>
+            <span>Assignment Tracker</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="search-container">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for a course...">
+            <button class="search-btn">Search</button>
+          </div>
+        </div>
+        <div class="header-actions">
+          <div class="notification-icon">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </div>
+          <div class="user-profile">
+            <span>John Doe</span>
+            <a href="#" class="logout-btn">Logout</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="#">Courses</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Database Management System - DATA6221</span>
+      </div>
+
+      <!-- Course Header -->
+      <div class="course-header">
+        <div class="course-info">
+          <h1>Database Management System - DATA6221</h1>
+          <div class="instructor">
+            <i class="fas fa-user"></i>
+            <span>Dr. Nishtha Phutela</span>
+          </div>
+          <div class="schedule">
+            <i class="fas fa-calendar"></i>
+            <span>Monday & Wednesday</span>
+          </div>
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Computer Lab 4</span>
+          </div>
+        </div>
+        <div class="course-actions">
+          <button class="btn btn-outline">
+            <i class="fas fa-envelope"></i>
+            <span>Contact Instructor</span>
+          </button>
+          <button class="btn btn-primary">
+            <i class="fas fa-star"></i>
+            <span>Add to Favorites</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Course Navigation -->
+      <div class="course-nav">
+        <button class="nav-tab active" data-tab="overview">Overview</button>
+        <button class="nav-tab" data-tab="modules">Modules</button>
+        <button class="nav-tab" data-tab="assignments">Assignments</button>
+        <button class="nav-tab" data-tab="discussions">Discussions</button>
+        <button class="nav-tab" data-tab="resources">Resources</button>
+        <button class="nav-tab" data-tab="grades">Grades</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- Overview Tab -->
+        <div class="tab-pane active" id="overview">
+          <div class="overview-grid">
+            <!-- Course Description -->
+            <div class="card">
+              <div class="card-header">
+                <h2>Course Description</h2>
+              </div>
+              <div class="card-body">
+                <p>This course provides an introduction to database management systems, focusing on relational database concepts, design principles, and practical implementation. Students will learn SQL, normalization, transaction management, and database security.</p>
+                <div class="course-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Credits:</span>
+                    <span class="meta-value">4</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">16 weeks</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Level:</span>
+                    <span class="meta-value">Undergraduate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Announcements -->
+            <div class="card">
+              <div class="card-header">
+                <h2>Announcements</h2>
+              </div>
+              <div class="card-body">
+                <div class="announcement">
+                  <div class="announcement-header">
+                    <h3>Mid-term Exam Rescheduled</h3>
+                    <span class="date">Posted on Mar 15, 2025</span>
+                  </div>
+                  <p>The mid-term exam has been rescheduled to March 25th due to scheduling conflicts. Please update your calendars accordingly.</p>
+                </div>
+                <div class="announcement">
+                  <div class="announcement-header">
+                    <h3>Guest Lecture: Database Security</h3>
+                    <span class="date">Posted on Mar 10, 2025</span>
+                  </div>
+                  <p>We'll have a guest lecturer from Oracle discussing database security next Wednesday. Attendance is mandatory.</p>
+                </div>
+                <a href="#" class="view-all">View all announcements</a>
+              </div>
+            </div>
+
+            <!-- Upcoming Deadlines -->
+            <div class="card">
+              <div class="card-header">
+                <h2>Upcoming Deadlines</h2>
+              </div>
+              <div class="card-body">
+                <div class="deadline-list">
+                  <div class="deadline urgent">
+                    <div class="deadline-info">
+                      <h3>Assignment 3: SQL Joins</h3>
+                      <p>Due Tomorrow - 11:59 PM</p>
+                    </div>
+                    <a href="#" class="btn btn-sm">Submit</a>
+                  </div>
+                  <div class="deadline">
+                    <div class="deadline-info">
+                      <h3>Lab Exercise: Normalization</h3>
+                      <p>Due Mar 20, 2025 - 11:59 PM</p>
+                    </div>
+                    <a href="#" class="btn btn-sm">View</a>
+                  </div>
+                  <div class="deadline">
+                    <div class="deadline-info">
+                      <h3>Mid-term Exam</h3>
+                      <p>Mar 25, 2025 - 10:00 AM</p>
+                    </div>
+                    <a href="#" class="btn btn-sm">Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Recent Activity -->
+            <div class="card">
+              <div class="card-header">
+                <h2>Recent Activity</h2>
+              </div>
+              <div class="card-body">
+                <div class="activity-list">
+                  <div class="activity-item">
+                    <div class="activity-icon grade">
+                      <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="activity-content">
+                      <p>Your submission for <strong>Assignment 2</strong> was graded</p>
+                      <span class="activity-time">Yesterday at 3:45 PM</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-icon comment">
+                      <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="activity-content">
+                      <p>Dr. Phutela replied to your question in <strong>Discussion Forum</strong></p>
+                      <span class="activity-time">Mar 14, 2025 at 10:12 AM</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-icon material">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="activity-content">
+                      <p>New material <strong>Transaction Management.pdf</strong> was added</p>
+                      <span class="activity-time">Mar 13, 2025 at 9:00 AM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modules Tab -->
+        <div class="tab-pane" id="modules">
+          <div class="modules-container">
+            <div class="module">
+              <div class="module-header">
+                <h2>Module 1: Introduction to Database Systems</h2>
+                <button class="module-toggle">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="module-content">
+                <div class="module-topics">
+                  <div class="topic completed">
+                    <div class="topic-header">
+                      <i class="fas fa-check-circle"></i>
+                      <h3>1.1 Database Concepts and Architecture</h3>
+                    </div>
+                    <div class="topic-resources">
+                      <a href="#" class="resource">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Lecture Slides</span>
+                      </a>
+                      <a href="#" class="resource">
+                        <i class="fas fa-video"></i>
+                        <span>Lecture Recording</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="topic completed">
+                    <div class="topic-header">
+                      <i class="fas fa-check-circle"></i>
+                      <h3>1.2 Database Models and Languages</h3>
+                    </div>
+                    <div class="topic-resources">
+                      <a href="#" class="resource">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Lecture Slides</span>
+                      </a>
+                      <a href="#" class="resource">
+                        <i class="fas fa-video"></i>
+                        <span>Lecture Recording</span>
+                      </a>
+                      <a href="#" class="resource">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Reading Material</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="topic completed">
+                    <div class="topic-header">
+                      <i class="fas fa-check-circle"></i>
+                      <h3>1.3 DBMS Components and Functions</h3>
+                    </div>
+                    <div class="topic-resources">
+                      <a href="#" class="resource">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Lecture Slides</span>
+                      </a>
+                      <a href="#" class="resource">
+                        <i class="fas fa-video"></i>
+                        <span>Lecture Recording</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="module">
+              <div class="module-header">
+                <h2>Module 2: Relational Database Design</h2>
+                <button class="module-toggle">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="module-content">
+                <div class="module-topics">
+                  <div class="topic active">
+                    <div class="topic-header">
+                      <i class="fas fa-play-circle"></i>
+                      <h3>2.1 Entity-Relationship Modeling</h3>
+                    </div>
+                    <div class="topic-resources">
+                      <a href="#" class="resource">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Lecture Slides</span>
+                      </a>
+                      <a href="#" class="resource">
+                        <i class="fas fa-video"></i>
+                        <span>Lecture Recording</span>
+                      </a>
+                      <a href="#" class="resource">
+                        <i class="fas fa-tasks"></i>
+                        <span>Practice Exercise</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="topic">
+                    <div class="topic-header">
+                      <i class="fas fa-circle"></i>
+                      <h3>2.2 Normalization and Functional Dependencies</h3>
+                    </div>
+                    <div class="topic-resources">
+                      <a href="#" class="resource">
+                        <i class="fas fa-lock"></i>
+                        <span>Available on Mar 20, 2025</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="topic">
+                    <div class="topic-header">
+                      <i class="fas fa-circle"></i>
+                      <h3>2.3 Schema Refinement</h3>
+                    </div>
+                    <div class="topic-resources">
+                      <a href="#" class="resource">
+                        <i class="fas fa-lock"></i>
+                        <span>Available on Mar 27, 2025</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="module">
+              <div class="module-header">
+                <h2>Module 3: SQL</h2>
+                <button class="module-toggle">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="module-content">
+                <div class="module-topics">
+                  <div class="topic">
+                    <div class="topic-header">
+                      <i class="fas fa-circle"></i>
+                      <h3>3.1 SQL Data Definition Language (DDL)</h3>
+                    </div>
+                    <div class="topic-resources">
+                      <a href="#" class="resource">
+                        <i class="fas fa-lock"></i>
+                        <span>Available on Apr 3, 2025</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="topic">
+                    <div class="topic-header">
+                      <i class="fas fa-circle"></i>
+                      <h3>3.2 SQL Queries and Functions</h3>
+                    </div>
+                    <div class="topic-resources">
+                      <a href="#" class="resource">
+                        <i class="fas fa-lock"></i>
+                        <span>Available on Apr 10, 2025</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="topic">
+                    <div class="topic-header">
+                      <i class="fas fa-circle"></i>
+                      <h3>3.3 SQL Advanced Queries and Joins</h3>
+                    </div>
+                    <div class="topic-resources">
+                      <a href="#" class="resource">
+                        <i class="fas fa-lock"></i>
+                        <span>Available on Apr 17, 2025</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Assignments Tab -->
+        <div class="tab-pane" id="assignments">
+          <div class="assignments-container">
+            <div class="assignments-filters">
+              <div class="filter-group">
+                <label>Status:</label>
+                <select id="status-filter">
+                  <option value="all">All</option>
+                  <option value="upcoming">Upcoming</option>
+                  <option value="submitted">Submitted</option>
+                  <option value="graded">Graded</option>
+                  <option value="missed">Missed</option>
+                </select>
+              </div>
+              <div class="search-assignments">
+                <input type="text" placeholder="Search assignments...">
+                <button><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+
+            <div class="assignments-list">
+              <div class="assignment-item urgent">
+                <div class="assignment-info">
+                  <h3>Assignment 3: SQL Joins</h3>
+                  <div class="assignment-meta">
+                    <span class="due-date">Due: Tomorrow, 11:59 PM</span>
+                    <span class="points">Points: 15</span>
+                    <span class="status pending">Not Submitted</span>
+                  </div>
+                  <p>Implement SQL queries demonstrating different types of joins on the provided database schema.</p>
+                </div>
+                <div class="assignment-actions">
+                  <a href="#" class="btn btn-primary">Submit Assignment</a>
+                </div>
+              </div>
+
+              <div class="assignment-item">
+                <div class="assignment-info">
+                  <h3>Lab Exercise: Normalization</h3>
+                  <div class="assignment-meta">
+                    <span class="due-date">Due: Mar 20, 2025, 11:59 PM</span>
+                    <span class="points">Points: 10</span>
+                    <span class="status pending">Not Submitted</span>
+                  </div>
+                  <p>Practice normalizing database schemas to reduce redundancy and improve data integrity.</p>
+                </div>
+                <div class="assignment-actions">
+                  <a href="#" class="btn btn-outline">View Details</a>
+                </div>
+              </div>
+
+              <div class="assignment-item completed">
+                <div class="assignment-info">
+                  <h3>Assignment 2: ER Diagram</h3>
+                  <div class="assignment-meta">
+                    <span class="due-date">Due: Mar 8, 2025, 11:59 PM</span>
+                    <span class="points">Points: 20</span>
+                    <span class="status graded">Graded: 18/20</span>
+                  </div>
+                  <p>Create an Entity-Relationship diagram for the case study provided in class.</p>
+                </div>
+                <div class="assignment-actions">
+                  <a href="#" class="btn btn-outline">View Feedback</a>
+                </div>
+              </div>
+
+              <div class="assignment-item completed">
+                <div class="assignment-info">
+                  <h3>Assignment 1: Database Concepts</h3>
+                  <div class="assignment-meta">
+                    <span class="due-date">Due: Feb 25, 2025, 11:59 PM</span>
+                    <span class="points">Points: 10</span>
+                    <span class="status graded">Graded: 10/10</span>
+                  </div>
+                  <p>Answer questions about fundamental database concepts and terminology.</p>
+                </div>
+                <div class="assignment-actions">
+                  <a href="#" class="btn btn-outline">View Feedback</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Discussions Tab -->
+        <div class="tab-pane" id="discussions">
+          <div class="discussions-container">
+            <div class="discussions-header">
+              <h2>Course Discussions</h2>
+              <button class="btn btn-primary">New Discussion</button>
+            </div>
+
+            <div class="discussion-boards">
+              <div class="discussion-board">
+                <div class="board-header">
+                  <h3>General Discussion</h3>
+                  <span class="post-count">16 posts</span>
+                </div>
+                <div class="discussion-list">
+                  <div class="discussion-item">
+                    <div class="discussion-info">
+                      <h4>Question about Transaction Isolation Levels</h4>
+                      <div class="discussion-meta">
+                        <span class="author">John Doe</span>
+                        <span class="date">Mar 15, 2025</span>
+                        <span class="replies">5 replies</span>
+                      </div>
+                      <p>I'm struggling to understand the difference between Read Committed and Repeatable Read isolation levels...</p>
+                    </div>
+                    <div class="discussion-status">
+                      <span class="status unread">New Replies</span>
+                    </div>
+                  </div>
+                  <div class="discussion-item">
+                    <div class="discussion-info">
+                      <h4>ER Diagram Tool Recommendations</h4>
+                      <div class="discussion-meta">
+                        <span class="author">Maria Chen</span>
+                        <span class="date">Mar 10, 2025</span>
+                        <span class="replies">8 replies</span>
+                      </div>
+                      <p>Does anyone have recommendations for good tools to create ER diagrams for Assignment 2?</p>
+                    </div>
+                    <div class="discussion-status">
+                      <span class="status read">Read</span>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="view-all">View all discussions</a>
+              </div>
+
+              <div class="discussion-board">
+                <div class="board-header">
+                  <h3>Assignment Help</h3>
+                  <span class="post-count">24 posts</span>
+                </div>
+                <div class="discussion-list">
+                  <div class="discussion-item">
+                    <div class="discussion-info">
+                      <h4>Clarification on SQL Joins Assignment</h4>
+                      <div class="discussion-meta">
+                        <span class="author">Alex Johnson</span>
+                        <span class="date">Mar 16, 2025</span>
+                        <span class="replies">3 replies</span>
+                      </div>
+                      <p>For question 4 in Assignment 3, are we supposed to use LEFT JOIN or INNER JOIN?</p>
+                    </div>
+                    <div class="discussion-status">
+                      <span class="status instructor">Instructor Reply</span>
+                    </div>
+                  </div>
+                  <div class="discussion-item">
+                    <div class="discussion-info">
+                      <h4>Error in MySQL Workbench</h4>
+                      <div class="discussion-meta">
+                        <span class="author">Sophia Park</span>
+                        <span class="date">Mar 14, 2025</span>
+                        <span class="replies">7 replies</span>
+                      </div>
+                      <p>I'm getting an error when trying to execute the sample query from class. Can anyone help?</p>
+                    </div>
+                    <div class="discussion-status">
+                      <span class="status read">Read</span>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="view-all">View all discussions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resources Tab -->
+        <div class="tab-pane" id="resources">
+          <div class="resources-container">
+            <div class="resources-header">
+              <h2>Course Resources</h2>
+              <div class="resources-search">
+                <input type="text" placeholder="Search resources...">
+                <button><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+
+            <div class="resources-categories">
+              <button class="category-btn active" data-category="all">All</button>
+              <button class="category-btn" data-category="readings">Readings</button>
+              <button class="category-btn" data-category="slides">Lecture Slides</button>
+              <button class="category-btn" data-category="videos">Videos</button>
+              <button class="category-btn" data-category="software">Software</button>
+              <button class="category-btn" data-category="extras">Extra Resources</button>
+            </div>
+
+            <div class="resources-list">
+              <div class="resource-item" data-category="readings">
+                <div class="resource-icon">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="resource-info">
+                  <h3>Database System Concepts (Textbook)</h3>
+                  <p>Silberschatz, Korth, and Sudarshan, 7th Edition</p>
+                  <div class="resource-meta">
+                    <span class="type">Primary Textbook</span>
+                    <span class="size">PDF - 32MB</span>
+                  </div>
+                </div>
+                <div class="resource-actions">
+                  <a href="#" class="btn btn-sm">Download</a>
+                </div>
+              </div>
+
+              <div class="resource-item" data-category="slides">
+                <div class="resource-icon">
+                  <i class="fas fa-file-powerpoint"></i>
+                </div>
+                <div class="resource-info">
+                  <h3>Entity-Relationship Modeling</h3>
+                  <p>Lecture slides for Module 2.1</p>
+                  <div class="resource-meta">
+                    <span class="type">Lecture Slides</span>
+                    <span class="size">PDF - 5MB</span>
+                  </div>
+                </div>
+                <div class="resource-actions">
+                  <a href="#" class="btn btn-sm">Download</a>
+                </div>
+              </div>
+
+              <div class="resource-item" data-category="videos">
+                <div class="resource-icon">
+                  <i class="fas fa-video"></i>
+                </div>
+                <div class="resource-info">
+                  <h3>Database Normalization Tutorial</h3>
+                  <p>Supplementary video explaining 1NF, 2NF, and 3NF</p>
+                  <div class="resource-meta">
+                    <span class="type">Tutorial Video</span>
+                    <span class="duration">28 minutes</span>
+                  </div>
+                </div>
+                <div class="resource-actions">
+                  <a href="#" class="btn btn-sm">Watch</a>
+                </div>
+              </div>
+
+              <div class="resource-item" data-category="software">
+                <div class="resource-icon">
+                  <i class="fas fa-download"></i>
+                </div>
+                <div class="resource-info">
+                  <h3>MySQL Workbench Setup Guide</h3>
+                  <p>Installation and configuration instructions for the database tool we'll use in class</p>
+                  <div class="resource-meta">
+                    <span class="type">Software Guide</span>
+                    <span class="size">PDF - 3MB</span>
+                  </div>
+                </div>
+                <div class="resource-actions">
+                  <a href="#" class="btn btn-sm">Download</a>
+                </div>
+              </div>
+
+              <div class="resource-item" data-category="extras">
+                <div class="resource-icon">
+                  <i class="fas fa-link"></i>
+                </div>
+                <div class="resource-info">
+                  <h3>W3Schools SQL Tutorial</h3>
+                  <p>External resource for practicing SQL commands</p>
+                  <div class="resource-meta">
+                    <span class="type">External Resource</span>
+                    <span class="added">Added: Mar 5, 2025</span>
+                  </div>
+                </div>
+                <div class="resource-actions">
+                  <a href="#" class="btn btn-sm">Visit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grades Tab -->
+        <div class="tab-pane" id="grades">
+          <div class="grades-container">
+            <div class="grades-header">
+              <h2>Course Grades</h2>
+              <div class="grades-summary">
+                <div class="grade-stat">
+                  <span class="stat-label">Current Grade</span>
+                  <span class="stat-value">92.5%</span>
+                </div>
+                <div class="grade-stat">
+                  <span class="stat-label">Letter Grade</span>
+                  <span class="stat-value">A-</span>
+                </div>
+                <div class="grade-stat">
+                  <span class="stat-label">Course Complete</span>
+                  <span class="stat-value">35%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grade-chart">
+              <canvas id="gradeChart"></canvas>
+            </div>
+
+            <div class="grades-breakdown">
+              <table class="grades-table">
+                <thead>
+                  <tr>
+                    <th>Assignment</th>
+                    <th>Due Date</th>
+                    <th>Points</th>
+                    <th>Grade</th>
+                    <th>Feedback</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Assignment 1: Database Concepts</td>
+                    <td>Feb 25, 2025</td>
+                    <td>10</td>
+                    <td class="grade-good">10/10 (100%)</td>
+                    <td><a href="#" class="btn btn-sm">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>Quiz 1: Introduction to Databases</td>
+                    <td>Mar 1, 2025</td>
+                    <td>15</td>
+                    <td class="grade-good">13.5/15 (90%)</td>
+                    <td><a href="#" class="btn btn-sm">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>Assignment 2: ER Diagram</td>
+                    <td>Mar 8, 2025</td>
+                    <td>20</td>
+                    <td class="grade-good">18/20 (90%)</td>
+                    <td><a href="#" class="btn btn-sm">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>Assignment 3: SQL Joins</td>
+                    <td>Mar 18, 2025</td>
+                    <td>15</td>
+                    <td class="grade-pending">Not Submitted</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Lab Exercise: Normalization</td>
+                    <td>Mar 20, 2025</td>
+                    <td>10</td>
+                    <td class="grade-pending">Not Submitted</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Mid-term Exam</td>
+                    <td>Mar 25, 2025</td>
+                    <td>100</td>
+                    <td class="grade-pending">Upcoming</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="dbms.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
