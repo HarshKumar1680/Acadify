@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar | Acadify</title>
+    <link rel="stylesheet" href="c.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="Acadify Logo" class="logo">
+                <h1 class="logo-text">Acadify</h1>
+            </div>
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">ACADEMIC</p>
+                <nav class="sidebar-nav">
+                    <a href="index.html" class="nav-item">
+                        <i class="fas fa-th-large"></i> Dashboard
+                    </a>
+                    <a href="timetable.html" class="nav-item">
+                        <i class="fas fa-calendar-alt"></i> Timetable
+                    </a>
+                   
+                    <a href="peerreview.html" class="nav-item">
+                        <i class="fas fa-users"></i> Peer Review
+                    </a>
+                    <a href="#" class="nav-item active">
+                        <i class="fas fa-calendar"></i> Calendar
+                    </a>
+                    <a href="assignmenttracker.html" class="nav-item">
+                        <i class="fas fa-tasks"></i> Assignment Tracker
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="calendar-section">
+                <div class="calendar-header">
+                    <h1>Academic Calendar</h1>
+                    <div class="calendar-nav">
+                        <button id="prevMonth" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                        <h2 id="currentMonth">March 2025</h2>
+                        <button id="nextMonth" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="calendar-container">
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-days" id="calendarDays">
+                        <!-- Days populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="events-sidebar">
+                    <h3>Upcoming Events</h3>
+                    <div class="events-list" id="eventsList">
+                        <!-- Events populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="c.js"></script>
+</body>
+</html>
