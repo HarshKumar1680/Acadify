@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning - MCIN6222 | Acadify</title>
+    <link rel="stylesheet" href="dbms.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="Acadify Logo" class="logo">
+                <h1 class="logo-text">Acadify</h1>
+            </div>
+            
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">ACADEMIC</p>
+                <nav class="sidebar-nav">
+                    <a href="index.html" class="nav-item">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="timetable.html" class="nav-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Timetable</span>
+                    </a>
+                    
+                    <a href="peerreview.html" class="nav-item">
+                        <i class="fas fa-users"></i>
+                        <span>Peer Review</span>
+                    </a>
+                    <a href="c.html" class="nav-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Calendar</span>
+                    </a>
+                    <a href="assignmentracker.html" class="nav-item">
+                        <i class="fas fa-tasks"></i>
+                        <span>Assignment Tracker</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for a course...">
+                        <button class="search-btn">Search</button>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">2</span>
+                    </div>
+                    <div class="user-profile">
+                        <span>John Doe</span>
+                        <a href="#" class="logout-btn">Logout</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="dashboard.html">Courses</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Machine Learning - MCIN6222</span>
+            </div>
+
+            <!-- Course Header -->
+            <div class="course-header">
+                <div class="course-info">
+                    <h1>Machine Learning - MCIN6222</h1>
+                    <div class="instructor">
+                        <i class="fas fa-user"></i>
+                        <span>Prof. Anantha Rao</span>
+                    </div>
+                    <div class="schedule">
+                        <i class="fas fa-calendar"></i>
+                        <span>Tuesday & Thursday</span>
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Computer Lab 2</span>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Instructor</span>
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-star"></i>
+                        <span>Add to Favorites</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Course Navigation -->
+            <div class="course-nav">
+                <button class="nav-tab active" data-tab="overview">Overview</button>
+                <button class="nav-tab" data-tab="modules">Modules</button>
+                <button class="nav-tab" data-tab="assignments">Assignments</button>
+                <button class="nav-tab" data-tab="discussions">Discussions</button>
+                <button class="nav-tab" data-tab="resources">Resources</button>
+                <button class="nav-tab" data-tab="grades">Grades</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Overview Tab -->
+                <div class="tab-pane active" id="overview">
+                    <div class="overview-grid">
+                        <!-- Course Description -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Course Description</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>This course provides a comprehensive introduction to machine learning, covering supervised and unsupervised learning, neural networks, and deep learning. Students will implement various ML algorithms and work on practical projects.</p>
+                                <div class="course-meta">
+                                    <div class="meta-item">
+                                        <span class="meta-label">Credits:</span>
+                                        <span class="meta-value">4</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">Duration:</span>
+                                        <span class="meta-value">16 weeks</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">Level:</span>
+                                        <span class="meta-value">Graduate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Announcements -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Announcements</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="announcement">
+                                    <div class="announcement-header">
+                                        <h3>Project Groups Formation</h3>
+                                        <span class="date">Posted on Mar 16, 2025</span>
+                                    </div>
+                                    <p>Please form groups of 3-4 students for the final project. Submit your group members' names by March 20th.</p>
+                                </div>
+                                <div class="announcement">
+                                    <div class="announcement-header">
+                                        <h3>GPU Lab Access</h3>
+                                        <span class="date">Posted on Mar 14, 2025</span>
+                                    </div>
+                                    <p>The GPU lab will be available for deep learning experiments starting next week. Book your slots early.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Upcoming Deadlines -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Upcoming Deadlines</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="deadline-list">
+                                    <div class="deadline urgent">
+                                        <div class="deadline-info">
+                                            <h3>Neural Networks Implementation</h3>
+                                            <p>Due Today - 11:59 PM</p>
+                                        </div>
+                                        <a href="#" class="btn btn-sm">Submit</a>
+                                    </div>
+                                    <div class="deadline">
+                                        <div class="deadline-info">
+                                            <h3>Project Proposal</h3>
+                                            <p>Due Mar 20, 2025 - 11:59 PM</p>
+                                        </div>
+                                        <a href="#" class="btn btn-sm">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Modules Tab -->
+<div class="tab-pane" id="modules">
+    <div class="modules-container">
+      <div class="module">
+        <div class="module-header">
+          <h2>Module 1: Introduction to Machine Learning</h2>
+          <button class="module-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="module-content">
+          <div class="module-topics">
+            <div class="topic completed">
+              <div class="topic-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>1.1 What is Machine Learning?</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-file-pdf"></i>
+                  <span>Lecture Slides</span>
+                </a>
+                <a href="#" class="resource">
+                  <i class="fas fa-video"></i>
+                  <span>Lecture Recording</span>
+                </a>
+              </div>
+            </div>
+            <div class="topic completed">
+              <div class="topic-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>1.2 Types of Machine Learning</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-file-pdf"></i>
+                  <span>Lecture Slides</span>
+                </a>
+                <a href="#" class="resource">
+                  <i class="fas fa-video"></i>
+                  <span>Lecture Recording</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="module">
+        <div class="module-header">
+          <h2>Module 2: Supervised Learning</h2>
+          <button class="module-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="module-content">
+          <div class="module-topics">
+            <div class="topic active">
+              <div class="topic-header">
+                <i class="fas fa-play-circle"></i>
+                <h3>2.1 Linear Regression</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-file-pdf"></i>
+                  <span>Lecture Slides</span>
+                </a>
+                <a href="#" class="resource">
+                  <i class="fas fa-video"></i>
+                  <span>Lecture Recording</span>
+                </a>
+                <a href="#" class="resource">
+                  <i class="fas fa-tasks"></i>
+                  <span>Practice Exercise</span>
+                </a>
+              </div>
+            </div>
+            <div class="topic">
+              <div class="topic-header">
+                <i class="fas fa-circle"></i>
+                <h3>2.2 Classification: Logistic Regression</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-lock"></i>
+                  <span>Available on May 5, 2025</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="module">
+        <div class="module-header">
+          <h2>Module 3: Unsupervised Learning</h2>
+          <button class="module-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="module-content">
+          <div class="module-topics">
+            <div class="topic">
+              <div class="topic-header">
+                <i class="fas fa-circle"></i>
+                <h3>3.1 Clustering: K-Means</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-lock"></i>
+                  <span>Available on May 12, 2025</span>
+                </a>
+              </div>
+            </div>
+            <div class="topic">
+              <div class="topic-header">
+                <i class="fas fa-circle"></i>
+                <h3>3.2 Dimensionality Reduction</h3>
+              </div>
+              <div class="topic-resources">
+                <a href="#" class="resource">
+                  <i class="fas fa-lock"></i>
+                  <span>Available on May 19, 2025</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Machine Learning Assignments -->
+  <div class="assignment-item urgent">
+    <div class="assignment-info">
+      <h3>Assignment 3: Decision Trees</h3>
+      <div class="assignment-meta">
+        <span class="due-date">Due: Tomorrow, 11:59 PM</span>
+        <span class="points">Points: 20</span>
+        <span class="status pending">Not Submitted</span>
+      </div>
+      <p>Build and evaluate a decision tree classifier using the provided dataset.</p>
+    </div>
+    <div class="assignment-actions">
+      <a href="#" class="btn btn-primary">Submit Assignment</a>
+    </div>
+  </div>
+
+  <div class="assignment-item">
+    <div class="assignment-info">
+      <h3>Lab Exercise: Linear Regression</h3>
+      <div class="assignment-meta">
+        <span class="due-date">Due: May 5, 2025, 11:59 PM</span>
+        <span class="points">Points: 10</span>
+        <span class="status pending">Not Submitted</span>
+      </div>
+      <p>Implement a simple linear regression model using Python and interpret the results.</p>
+    </div>
+    <div class="assignment-actions">
+      <a href="#" class="btn btn-outline">View Details</a>
+    </div>
+  </div>
+  <!-- Machine Learning Discussions Tab -->
+<div class="tab-pane" id="ml-discussions">
+    <div class="discussions-container">
+      <div class="discussions-header">
+        <h2>Machine Learning Discussions</h2>
+        <button class="btn btn-primary">New Discussion</button>
+      </div>
+  
+      <div class="discussion-boards">
+        <div class="discussion-board">
+          <div class="board-header">
+            <h3>General Discussion</h3>
+            <span class="post-count">12 posts</span>
+          </div>
+          <div class="discussion-list">
+            <div class="discussion-item">
+              <div class="discussion-info">
+                <h4>Understanding Overfitting vs. Underfitting</h4>
+                <div class="discussion-meta">
+                  <span class="author">Emily Carter</span>
+                  <span class="date">Mar 12, 2025</span>
+                  <span class="replies">6 replies</span>
+                </div>
+                <p>Can someone explain in simple terms how to differentiate overfitting and underfitting in machine learning models?</p>
+              </div>
+              <div class="discussion-status">
+                <span class="status unread">New Replies</span>
+              </div>
+            </div>
+            <div class="discussion-item">
+              <div class="discussion-info">
+                <h4>Best Resources for Neural Networks Basics</h4>
+                <div class="discussion-meta">
+                  <span class="author">David Lee</span>
+                  <span class="date">Mar 8, 2025</span>
+                  <span class="replies">4 replies</span>
+                </div>
+                <p>Looking for beginner-friendly resources or videos that explain neural networks well. Any suggestions?</p>
+              </div>
+              <div class="discussion-status">
+                <span class="status read">Read</span>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="view-all">View all discussions</a>
+        </div>
+  
+        <div class="discussion-board">
+          <div class="board-header">
+            <h3>Assignment Help</h3>
+            <span class="post-count">18 posts</span>
+          </div>
+          <div class="discussion-list">
+            <div class="discussion-item">
+              <div class="discussion-info">
+                <h4>Confusion on Decision Trees Assignment</h4>
+                <div class="discussion-meta">
+                  <span class="author">Brian Kim</span>
+                  <span class="date">Mar 14, 2025</span>
+                  <span class="replies">5 replies</span>
+                </div>
+                <p>In Assignment 2, what splitting criterion should we use: Gini Index or Entropy?</p>
+              </div>
+              <div class="discussion-status">
+                <span class="status instructor">Instructor Reply</span>
+              </div>
+            </div>
+            <div class="discussion-item">
+              <div class="discussion-info">
+                <h4>Issue Installing scikit-learn</h4>
+                <div class="discussion-meta">
+                  <span class="author">Olivia Brown</span>
+                  <span class="date">Mar 11, 2025</span>
+                  <span class="replies">8 replies</span>
+                </div>
+                <p>I'm facing installation errors with scikit-learn on Windows. Any quick fixes?</p>
+              </div>
+              <div class="discussion-status">
+                <span class="status read">Read</span>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="view-all">View all discussions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Machine Learning Grades Tab -->
+<div class="tab-pane" id="ml-grades">
+    <div class="grades-container">
+      <div class="grades-header">
+        <h2>Machine Learning Grades</h2>
+        <div class="grades-summary">
+          <div class="grade-stat">
+            <span class="stat-label">Current Grade</span>
+            <span class="stat-value">88.2%</span>
+          </div>
+          <div class="grade-stat">
+            <span class="stat-label">Letter Grade</span>
+            <span class="stat-value">B+</span>
+          </div>
+          <div class="grade-stat">
+            <span class="stat-label">Course Complete</span>
+            <span class="stat-value">60%</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="grade-chart">
+        <canvas id="mlGradeChart"></canvas>
+      </div>
+  
+      <div class="grades-breakdown">
+        <table class="grades-table">
+          <thead>
+            <tr>
+              <th>Assignment</th>
+              <th>Due Date</th>
+              <th>Points</th>
+              <th>Grade</th>
+              <th>Feedback</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Assignment 1: Supervised Learning</td>
+              <td>Feb 18, 2025</td>
+              <td>10</td>
+              <td class="grade-good">9/10 (90%)</td>
+              <td><a href="#" class="btn btn-sm">View</a></td>
+            </tr>
+            <tr>
+              <td>Quiz 1: Linear Regression</td>
+              <td>Mar 5, 2025</td>
+              <td>20</td>
+              <td class="grade-good">17/20 (85%)</td>
+              <td><a href="#" class="btn btn-sm">View</a></td>
+            </tr>
+            <tr>
+              <td>Assignment 2: Decision Trees</td>
+              <td>Mar 12, 2025</td>
+              <td>15</td>
+              <td class="grade-good">13/15 (87%)</td>
+              <td><a href="#" class="btn btn-sm">View</a></td>
+            </tr>
+            <tr>
+              <td>Assignment 3: Neural Networks</td>
+              <td>Mar 22, 2025</td>
+              <td>20</td>
+              <td class="grade-pending">Not Submitted</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Lab Exercise: K-Means Clustering</td>
+              <td>Mar 26, 2025</td>
+              <td>10</td>
+              <td class="grade-pending">Not Submitted</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Final Exam</td>
+              <td>Apr 5, 2025</td>
+              <td>100</td>
+              <td class="grade-pending">Upcoming</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+            </div>
+        </main>
+    </div>
+    <script src="dbms.js"></script>
+</body>
+</html>
