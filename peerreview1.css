@@ -1,0 +1,72 @@
+/* General Styling*/
+body {
+    font-family: Arial, sans-serif;
+    background: url('assests/peer.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+} 
+
+/* Container Styling */
+.container {
+    background: rgba(135, 206, 250, 0.9);  
+    width: 90%; 
+     /* Adjust width based on screen */ 
+     max-width: 500px; 
+     /* Prevent excessive stretching */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 20px;
+    margin-top:50px;
+}
+
+/* Input and Button Styling */
+input, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Results Section */
+#results {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;  /* More compact on small screens */
+        padding: 15px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #results {
+        font-size: 16px;
+    }
+}
