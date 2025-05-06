@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Timetable</title>
+    <link rel="stylesheet" href="timetable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Acadify</h2>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <h3>ACADEMIC</h3>
+                    <a href="index.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                    <a href="timetable.html" class="active"><i class="fas fa-calendar"></i> Timetable</a>
+                    
+                    <a href="peerreview.html"><i class="fas fa-users"></i> Peer Review</a>
+                    <a href="c.html"><i class="far fa-calendar-alt"></i> Calendar</a>
+                    <a href="assignmenttracker.html"><i class="fas fa-tasks"></i> Assignment Tracker</a>
+                </div>
+                
+            </nav>
+        </aside>
+        <main>
+            <header>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="header-icons">
+                    <i class="far fa-bell"></i>
+                    <i class="far fa-user-circle"></i>
+                </div>
+            </header>
+            <div class="content">
+                <div class="timetable-container">
+                    <div class="timetable-header">
+                        <h2>Class Timetable</h2>
+                        <div class="timetable-actions">
+                            <button class="btn-save">Save</button>
+                        </div>
+                    </div>
+                    <div class="timetable-grid">
+                        <div class="time-header">Days</div>
+                        <div class="time-header">08:00-10:00</div>
+                        <div class="time-header">11:00-12:00</div>
+                        <div class="time-header">13:50-14:00</div>
+                        <div class="time-header">15:00-16:00</div>
+                        
+                        <div class="day-cell">Tuesday</div>
+                        <div class="class-cell">DBMS<br><span class="location">Computer Lab 2</span></div>
+                        <div class="class-cell">ML<br><span class="location">Computer Lab 2</span></div>
+                        <div class="class-cell"></div>
+                        <div class="class-cell"></div>
+
+                        <div class="day-cell">Wednesday</div>
+                        <div class="class-cell">COA<br><span class="location">Computer Lab 3</span></div>
+                        <div class="class-cell"></div>
+                        <div class="class-cell">DBMS<br><span class="location">Computer Lab 4</span></div>
+                        <div class="class-cell"></div>
+
+                        <div class="day-cell">Thursday</div>
+                        <div class="class-cell">DT<br><span class="location">Computer Lab 2</span></div>
+                        <div class="class-cell"></div>
+                        <div class="class-cell">DSA<br><span class="location">Computer Lab 6</span></div>
+                        <div class="class-cell"></div>
+
+                        <div class="day-cell">Friday</div>
+                        <div class="class-cell"></div>
+                        <div class="class-cell">ML<br><span class="location">Computer Lab 3</span></div>
+                        <div class="class-cell"></div>
+                        <div class="class-cell">DSA<br><span class="location">Computer Lab 4</span></div>
+                    </div>
+                </div>
+                <div class="calendar-reminders">
+                    <div class="mini-calendar">
+                        <div class="calendar-header">
+                            <span>Feb 17 - Feb 23</span>
+                            <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid"></div>
+                    </div>
+                    <div class="reminders">
+                        <h3>Reminders</h3>
+                        <ul>
+                            <li>
+                                <span class="date">18-26 Feb</span>
+                                <span class="reminder-text">Project Week- time to review the projects !!</span>
+                            </li>
+                            <li>
+                                <span class="date">28-2 March</span>
+                                <span class="reminder-text">Fest Holidays</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="view-more">View more <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="timetable.js"></script>
+</body>
+</html>
