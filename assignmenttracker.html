@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments Tracker</title>
+    <link rel="stylesheet" href="assignmentracker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Acadify Logo">
+                <h2>Acadify</h2>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <h3>ACADEMIC</h3>
+                    <a href="index.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                    <a href="timetable.html"><i class="fas fa-calendar"></i> Timetable</a>
+                    
+                    <a href="peerreview.html"><i class="fas fa-users"></i> Peer Review</a>
+                    <a href="c.html"><i class="far fa-calendar-alt"></i> Calendar</a>
+                    <a href="assignmenttracker.html" class="active"><i class="fas fa-tasks"></i> Assignment Tracker</a>
+                </div>
+            </nav>
+        </aside>
+        <main>
+            <header>
+               
+                <div class="header-icons">
+                    
+                    <button class="add-assignment">Add Assignment</button>
+                    
+                </div>
+            </header>
+            <div class="content">
+                <div class="cards-container">
+                    <div class="card assignments">
+                        <h2>Assignments</h2>
+                        <p class="notice">Its the last days of the semester!! Here's the list of the stuff you need to finish off.</p>
+                        <div class="upcoming">
+                            <h3>Upcoming:</h3>
+                            <div class="assignment-item">
+                                <span class="number">1</span>
+                                <i class="fas fa-book"></i>
+                                <span class="course">DBMS6222</span>
+                            </div>
+                            <div class="assignment-item">
+                                <span class="number">2</span>
+                                <i class="fas fa-book"></i>
+                                <span class="course">DSA6222</span>
+                                <span class="part">Part 2</span>
+                            </div>
+                            <div class="assignment-item">
+                                <span class="number">3</span>
+                                <i class="fas fa-book"></i>
+                                <span class="course">DATA6221</span>
+                            </div>
+                            <div class="assignment-item">
+                                <span class="number">4</span>
+                                <i class="fas fa-book"></i>
+                                <span class="course">ML6212</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card attendance">
+                        <h2>Attendance</h2>
+                        <h3>Class Hours</h3>
+                        <div class="hours-container">
+                            <div class="hours">
+                                <span class="number">31</span>
+                                <span class="unit">hr</span>
+                            </div>
+                            <div class="minutes">
+                                <span class="number">45</span>
+                                <span class="unit">min</span>
+                            </div>
+                        </div>
+                        <p class="description">Amount of hours of classes attended this month so far</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="card credits">
+                        <h2>Credits</h2>
+                        <div class="credits-list">
+                            <div class="credit-item">
+                                <span class="number">1</span>
+                                <i class="fas fa-book"></i>
+                                <span class="course">DBMS</span>
+                                <div class="details">
+                                    <span class="part">Part 1</span>
+                                    <span class="score">90</span>
+                                </div>
+                            </div>
+                            <div class="credit-item">
+                                <span class="number">2</span>
+                                <i class="fas fa-book"></i>
+                                <span class="course">DATA6221</span>
+                                <div class="details">
+                                    <span class="assignment">Assignment 1</span>
+                                    <span class="score">75</span>
+                                </div>
+                            </div>
+                            <div class="credit-item">
+                                <span class="number">3</span>
+                                <i class="fas fa-book"></i>
+                                <span class="course">ML6212</span>
+                                <div class="details">
+                                    <span class="assignment">Assignment 1</span>
+                                    <span class="score">90</span>
+                                </div>
+                            </div>
+                            <button class="load-more">Load More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assignmentracker.js"></script>
+</body>
+</html>
